@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.heading {
+	font-size: 30px;
+	color: #3232a8;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 20px 0;
+}
+
+.product_parent {
+	/*background-color: rgba(191, 191, 214,0.1);*/
+	display: flex;
+	flex-wrap: wrap;
+	/*justify-content: center;*/
+	align-items: center;
+}
+
+.product_info {
+	background-color: rgba(50, 50, 168,0.1);
+	width: 20%;
+	margin: 15px 10px;
+	padding: 20px 22px;
+	text-align: left;
+}
+
+.product_item_head {
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+.product_img {
+	margin: 10px 0;
+}
+
+.label {
+	color: #3232a8;
+	text-transform: capitalize;
+	font-weight: 600;
+	display: block;
+}
+
+.product_description {
+	margin: 10px 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+}
+
+.primary_btn,
+.secondary_btn {
+	text-transform: uppercase;
+	font-size: 14px;
+	background-color: #3232a8;
+	font-weight: 700;
+	color: #fff;
+	padding: 8px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+	border: 1px solid #3232a8;
+	transition-duration: 0.3s;
+	margin: 5px 0;
+}
+
+.primary_btn:hover {
+	background-color: #fff;
+	color: #3232a8;
+}
+
+.secondary_btn {
+	background-color: #fff;
+	color: #3232a8;
+}
+
+.secondary_btn:hover {
+	color: #fff;
+	background-color: #3232a8;
+}

@@ -1,0 +1,20 @@
+<div class="container">
+
+    <h1 class="heading">Cart</h1>
+        <div class="product_parent">
+            <!-- structural directive for array item traversing -->
+            <div class="product_info" *ngFor="let item of items">				
+                <!-- property binding [] and string interpolation {{ }} -->
+                <h3 class="product_item_head" [title]="item.name+ ' details'">{{item.name}}</h3>
+                
+                <div class="product_img">
+                    <img src="assets/product.png" alt="product">
+                </div>
+                <!-- structural <dir></dir>ective for conditional checking -->
+                <p  class="product_description">
+                    <span class="label">Description:</span> {{item.description}}
+                </p>
+                <p  class="product_description">
+                    <span class="label">Price:</span> {{item.price}}
+                </p>
+            </div>

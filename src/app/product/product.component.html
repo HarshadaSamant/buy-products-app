@@ -1,0 +1,32 @@
+<div class="container">
+
+	<h1 class="heading">Product</h1>
+		<div class="product_parent">
+			<!-- structural directive for array item traversing -->
+			<div *ngFor="let product of Products; index as productId" class="product_info">  
+				
+				<!-- property binding [] and string interpolation {{ }} -->
+				  <h3 class="product_item_head" [title]="product.name+ ' details'">{{product.name}}</h3>
+				
+				<div class="product_img">
+					<img src="assets/product.png" alt="product">
+				</div>
+				<!-- structural <dir></dir>ective for conditional checking -->
+				<p *ngIf="product.description" class="product_description">
+				  <span class="label">Description:</span> {{product.description}}
+				</p>
+
+				<!-- event binding () -->
+				<button (click)="addToCart(product)" class="primary_btn">
+				  Add to cart
+				</button>
+				<app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+				<button [routerLink]="['/products', productId ]" class="primary_btn secondary_btn">
+				  show details
+				</button>
+				
+				  <!-- <a routerLink="/product-add" routerLinkActive="active">product</a>
+				  <a routerLink="/product-edit" routerLinkActive="active">product edit</a> -->
+			</div>
+		</div>
+</div>	

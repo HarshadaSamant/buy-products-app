@@ -1,0 +1,13 @@
+<div class="container">
+
+	<h1 class="heading">Product Details</h1>
+		<div class="product_parent">
+			<div *ngFor="let productItem of Products">
+				<!-- <div *ngIf="productItem.id === product"> -->
+						<h3>id: {{productItem.id}}</h3>
+						<h4>name: {{ productItem.name }}</h4>
+						<h4>description: {{ productItem.description }}</h4>
+				<!-- </div>	-->
+			</div>
+		</div>
+</div>
